@@ -43,3 +43,11 @@ has_special_characters = input("Do you want to have special characters(y/n)? ").
 pwd = generate_password(has_min_length, has_number, has_special_characters)
 
 print(pwd)
+
+choice = input("Do you do still want to generate a new password (y/n)? ").lower()
+while choice == "y":
+    pwd = generate_password(has_min_length, has_number, has_special_characters)
+    print(pwd)
+    choice = input("Do you do still want to generate a new password (y/n)? ").lower()
+if choice == "n":
+    print("Thank you for using the password generator!")
